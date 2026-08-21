@@ -17,9 +17,25 @@ São **duas aplicações web** sobre a mesma API: `web/` é a gestão usada pelo
 `loja/` é onde o cliente vê o cardápio e faz o pedido.
 
 Não há dependência nativa nem servidor de banco a instalar: o SQLite vem embutido no
-Node 22+. O arquivo do banco é criado em `server/pizzaria.db` na primeira execução.
+próprio Node, pelo módulo `node:sqlite`. O arquivo do banco é criado em
+`server/pizzaria.db` na primeira execução.
+
+## Pré-requisitos
+
+- **Node.js 24 ou superior** (`node --version`). O módulo `node:sqlite` só funciona
+  sem flag a partir do Node 23.4 — em versões 22.x seria preciso rodar com
+  `--experimental-sqlite`. Baixe em [nodejs.org](https://nodejs.org).
+- **Git** (`git --version`).
+- Três terminais livres: a API e as duas aplicações rodam ao mesmo tempo.
 
 ## Como executar
+
+```bash
+git clone https://github.com/pecinn/pizzaria-joao-maria.git
+cd pizzaria-joao-maria
+```
+
+Depois, um terminal para cada parte:
 
 ```bash
 # 1) Backend  (http://localhost:3333)
