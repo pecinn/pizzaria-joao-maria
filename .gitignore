@@ -1,0 +1,26 @@
+# Dependências
+node_modules/
+
+# Builds
+dist/
+*.tsbuildinfo
+
+# Banco de dados — contém dados de clientes (nome, telefone, endereço).
+# É recriado sozinho na primeira execução; nunca deve ir para o repositório.
+*.db
+*.db-shm
+*.db-wal
+
+# Logs de execução
+*.log
+
+# Ambiente e segredos
+.env
+.env.*
+!.env.example
+
+# Sistema operacional / editor
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/
